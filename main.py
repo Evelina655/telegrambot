@@ -228,6 +228,6 @@ def get_randomFilm():
 # ---------------------------------------------------------------------
 
 
-bot.polling(none_stop=True, interval=0)  # Запускаем бота
+bot.polling(none_stop=True, interval=0)  # Зaпускаем бота
 
 print()

@@ -10,7 +10,7 @@ def dz3(bot, chat_id):
     bot.send_message(chat_id, text="ДOДЕЛАТЬ!")
 # -----------------------------------------------------------------------
 def dz4(bot, chat_id):
-    bot.send_message(chat_id, text="ДОДЕЛАТЬ!")
+    bot.send_message(chat_id, text="ДOДЕЛАТЬ!")
 # -----------------------------------------------------------------------
 def dz5(bot, chat_id):
     my_inputInt(bot, chat_id, "Сколько вам лет?", dz5_ResponseHandler)

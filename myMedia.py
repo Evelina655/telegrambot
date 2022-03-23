@@ -4,8 +4,8 @@ class film:
         self.kinopoiskID = ""  # ID на сайте КиноПоиск
         self.imdbID = ""  # ID на сайтe IMDB
         self.name = ""  # Наименование (оригинальное)
-        self.nameRUS = ""  # Наименование-RUS
-        self.nameENG = ""  # Наименование-ENG
+        self.nameRUS = ""  # Нaименование-RUS
+        self.nameENG = ""  # Нaименование-ENG
         self.coverURL = ""  # Обложка_url 
         self.year = ""  # Год
         self.countries = ""  # Страны (список)
