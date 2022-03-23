@@ -11,7 +11,7 @@ import BotGames  # бот-игры, файл BotGames.py
 from menuBot import Menu  # в этом модуле есть код, создающий экземпляры классов описывающих моё меню
 import DZ  # домашнее задание от первого урока
 
-bot = telebot.TeleBot('5207758409:AAGJ5MVwNBkinpzp6PDCyOVNCxODByUsO-4')  # Создаем экземпляр бота
+bot = telebot.TeleBot('5141197469:AAGkmotavET7oFzD56U1gjTJc9CwF7MNTzI')  # Создаем экземпляр бота
 game21 = None  # класс игры в 21, экземпляр создаём только при начале игры
 
 
@@ -41,7 +41,7 @@ def get_text_messages(message):
         if ms_text == "Помощь":
             send_help(chat_id)
 
-        elif ms_text == "Прислать собаку":
+        elif ms_text == "Прислать писателя":
             bot.send_photo(chat_id, photo=get_dogURL(), caption="Вот тебе собачка!")
 
         elif ms_text == "Прислать анекдот":
@@ -163,7 +163,7 @@ def send_film(chat_id):
 # -----------------------------------------------------------------------
 def get_anekdot():
     array_anekdots = []
-    req_anek = requests.get('http://anekdotme.ru/random')
+    req_anek = requests.get('http://api.forismatic.com/api/1.0/')
     if req_anek.status_code == 200:
         soup = bs4.BeautifulSoup(req_anek.text, "html.parser")
         result_find = soup.select('.anekdot_text')
@@ -177,7 +177,7 @@ def get_anekdot():
 # -----------------------------------------------------------------------
 def get_dogURL():
     url = ""
-    req = requests.get('https://random.dog/woof.json')
+    req = requests.get('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
     if req.status_code == 200:
         r_json = req.json()
         url = r_json['url']

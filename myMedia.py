@@ -2,7 +2,7 @@
 class film:
     def __init__(self, name, buttons=None, parent=None, action=None):
         self.kinopoiskID = ""  # ID на сайте КиноПоиск
-        self.imdbID = ""  # ID на сайте IMDB
+        self.imdbID = ""  # ID на сайтe IMDB
         self.name = ""  # Наименование (оригинальное)
         self.nameRUS = ""  # Наименование-RUS
         self.nameENG = ""  # Наименование-ENG
